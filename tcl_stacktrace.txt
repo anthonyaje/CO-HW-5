@@ -1,0 +1,7 @@
+Fri Dec 20 00:21:13 CST 2013
+Trace back: wrong # args: should be "mti_popupinternal menu w"
+    while executing
+"mti_popupinternal .main_pane.structure.interior.cs.body.struct.qstructurepopup_popup "
+    ("after" script)
+  <2:C:/Modeltech_pe_edu_10.2c/tcl/tk8.5/bgerror.tcl:92: ::tkerror {wrong # args: should be "mti_popupinternal menu w"}
+  <1:eval:1: ::tk::dialog::error::bgerror {wrong # args: should be "mti_popupinternal menu w"}
