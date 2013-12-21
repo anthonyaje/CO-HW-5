@@ -31,9 +31,9 @@ Pipe_CPU_1 cpu(
 always #(`CYCLE_TIME/2) CLK = ~CLK;	
 
 initial  begin
-$readmemb("CO_P5_test1.txt", cpu.IM.Instr_Mem);
-//$readmemb("lab4_bonus_binary.txt", cpu.IM.Instr_Mem);
-    
+//$readmemb("CO_P5_test1.txt", cpu.IM.Instr_Mem);
+$readmemb("lab4_bonus_binary.txt", cpu.IM.Instr_Mem);
+		
 	CLK = 0;
 	RST = 0;
 	count = 0;
@@ -48,6 +48,7 @@ always@(posedge CLK) begin
     count = count + 1;
 	if( count == 5000 ) begin 
 	//print result to transcript 
+	$display("count=%d\n",count);
 	$display("Register===========================================================\n");
 	$display("r0=%d, r1=%d, r2=%d, r3=%d, r4=%d, r5=%d, r6=%d, r7=%d\n",
 	cpu.RF.Reg_File[0], cpu.RF.Reg_File[1], cpu.RF.Reg_File[2], cpu.RF.Reg_File[3], cpu.RF.Reg_File[4], 

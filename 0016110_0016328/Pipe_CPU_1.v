@@ -72,8 +72,12 @@ wire pc_mux_signal;
 wire detection_signal;
 wire [31:0] inst_oo_temp;
 
+wire [31:0] fw_mux_input;
+wire [1:0] store_mux_select;
+wire [32-1:0] store_value_mux_o;
+
 assign pc_mux_signal = branch_alu_res & branch;
-assign flush_mux_ifid = { pc_mux_signal , detection_signal};
+assign flush_mux_ifid = { detection_signal, pc_mux_signal };
 assign zero_ex = {16'd0, inst_o[15:0]};
 
 MUX_3to1 #(.size(32)) Mux_PC_JUMP(
@@ -84,6 +88,9 @@ MUX_3to1 #(.size(32)) Mux_PC_JUMP(
         .data_o(pc_source)
        );	
 
+// IF_instruction_module if_instruction_module(
+
+		// );
 	
 MUX_2to1 #(.size(32)) Mux_PC_Source(
         .data0_i(adder1_o),
@@ -273,8 +280,8 @@ alu ALU(
 
 MUX_3to1 #(.size(32)) Mux_fw1(
         .data0_i(RSdata_oo),
-        .data1_i(ALU_res_oo),
-        .data2_i(ALU_res_ooo),
+        .data1_i(fw_mux_input),
+        .data2_i(Reg_Write_Data),
         .select_i(fw1_control),
         .data_o(fw_alu_in1)
         );
@@ -289,8 +296,8 @@ MUX_3to1 #(.size(32)) Mux_ALUSrc(
 		
 MUX_3to1 #(.size(32)) Mux_fw2(
         .data0_i(RTdata_oo),
-        .data1_i(ALU_res_oo),
-        .data2_i(ALU_res_ooo),
+        .data1_i(fw_mux_input),
+        .data2_i(Reg_Write_Data),
         .select_i(fw2_control),
         .data_o(fw_alu_in2)
         );
@@ -328,7 +335,7 @@ Pipe_Reg #(.size(33)) EX_MEM_2(       //N is the total length of input/output
 Pipe_Reg #(.size(37)) EX_MEM_3(       //N is the total length of input/output
 	.rst_i(rst_n),
 	.clk_i(clk_i),   
-	.data_i({RTdata_oo,write_reg}),
+	.data_i({store_value_mux_o,write_reg}),
 	.data_o({RTdata_ooo,write_reg_oo})
 	);
 
@@ -337,13 +344,30 @@ ForwardingUnit fdunit (
    .exmem_rw_i(reg_write_ooo),
    .memwb_rd_i(write_reg_ooo),
    .memwb_rw_i(reg_write_oooo),
+   .write_to_memory_i(memWrite_oo),
+   
    .idex_rs_i(rs_oo),
    .idex_rt_i(rw_mux_in1),
    .forward1_o(fw1_control),
-   .forward2_o(fw2_control)
+   .forward2_o(fw2_control),
+   .mux_control_o(store_mux_select)
+   
 );
 
+MUX_3to1 #(.size(32)) Mux_Store_Reg(
+		.data0_i(RTdata_oo),
+		.data1_i(ALU_res_oo),
+		.data2_i(Reg_Write_Data),
+		.select_i(store_mux_select),
+		.data_o(store_value_mux_o)
+);
 /********************************************EX/MEM**********************************************************/
+MUX_2to1 #(.size(32)) Mux_memory_select(
+		.data0_i(ALU_res_oo),
+		.data1_i(memData),
+		.select_i(memRead_ooo),
+		.data_o(fw_mux_input)
+);
 
 Data_Memory DM(
 	.clk_i(clk_i),
@@ -376,3 +400,4 @@ endmodule
 		  
 
 
+  

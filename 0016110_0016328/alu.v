@@ -55,48 +55,48 @@ reg [31:0]s1,s2;
 always@(*)begin
 	case(ALU_control)
 		8:begin
-			result <= src1 * src2;
+			result = src1 * src2;
 		end
 		0:begin
-			result <= src1 & src2;
+			result = src1 & src2;
 		end
 		1:begin
-			result <= src1 | src2;
+			result = src1 | src2;
 		end
 		2:begin
-			result <= src1 + src2;
+			result = src1 + src2;
 		end
 		6:begin
-			result <= src1 - src2;
+			result = src1 - src2;
 		end
 		12:begin
-			result <= ~(src1 & src2);
+			result = ~(src1 & src2);
 		end
 		13:begin
-			result <= ~(src1 & src2);
+			result = ~(src1 & src2);
 		end
 		7:begin
 			case(bonus_control)
 				3'b000:begin
-					result <= (src1<src2)?1:0;
+					result = (src1<src2)?1:0;
 				end
 				3'b001:begin //sgt
-					result <= (src1>src2)?1:0;
+					result = (src1>src2)?1:0;
 				end
 				3'b010:begin 
-					result <= (src1<=src2)?1:0;
+					result = (src1<=src2)?1:0;
 				end
 				3'b011:begin //ge
-					result <= (src1>=src2)?1:0;
+					result = (src1>=src2)?1:0;
 				end
 				3'b110:begin //eq
-					result <= (src1==src2)?1:0;
+					result = (src1==src2)?1:0;
 				end
 				3'b100:begin //neq
-					result <= (src1!=src2)?1:0;
+					result = (src1!=src2)?1:0;
 				end
 				3'b101:begin //greater than or equal to src2-1
-					result <= (src1>=(src2-1))?1:0;
+					result = (src1>=(src2-1))?1:0;
 				end
 			endcase
 		end
@@ -105,10 +105,10 @@ end
 
 always@(*)begin
 	if(result==0)begin
-		zero <= 1;
+		zero = 1;
 	end
 	else begin
-		zero <= 0;
+		zero = 0;
 	end
 end
 
@@ -117,15 +117,15 @@ always@(*)begin
 	case(ALU_control)
 		2:begin
 			//addition
-			{cout,result1} <= s1 + s2;
+			{cout,result1} = s1 + s2;
 		end
 		6:begin
 			//subtraction
-			{cout,result1} <= s1 - s2 ;
+			{cout,result1} = s1 - s2 ;
 		end
 		
 		default:begin
-			cout <= 0;
+			cout = 0;
 		end
 		
 	endcase
@@ -137,17 +137,17 @@ always@(*)begin
 		2:begin
 			//addition
 			if(src1[31]&&src2[31]&&(result[31]))begin
-				overflow <= 0;
+				overflow = 0;
 			end
 			else if(~(src1[31]&&src2[31]&&(result[31])))begin
-				overflow <= 0;
+				overflow = 0;
 			end
 			else begin
-				overflow <= 1;
+				overflow = 1;
 			end
 		end
 		default:begin
-			overflow <= 0;
+			overflow = 0;
 		end
 	endcase
 end
