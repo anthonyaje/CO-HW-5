@@ -77,15 +77,15 @@ wire [1:0] store_mux_select;
 wire [32-1:0] store_value_mux_o;
 wire [32-1:0] mux_adder1_o;
 
-assign branch_flush_signal = branch_alu_res_oo & branch_ooo;
+assign branch_flush_signal = (branch_alu_res_oo & branch_ooo) | jump_oo[1] | jump_oo[0];
 assign flush_mux_ifid = { detection_signal, branch_flush_signal };
 assign zero_ex = {16'd0, inst_o[15:0]};
 
 MUX_3to1 #(.size(32)) Mux_PC_JUMP(
         .data0_i(pc_mux),
         .data1_i(jump_address),
-        .data2_i(RSdata_o),		//FIX ME: jr instruction 
-        .select_i(jump),
+        .data2_i(fw_alu_in1),		//FIX ME: jr instruction 
+        .select_i(jump_oo),
         .data_o(pc_source)
        );	
 	
@@ -169,9 +169,10 @@ DetectionUnit detectionUnit(
 		   .ifid_rs(inst_oo_temp[25:21]),
 		   .ifid_rt(inst_oo_temp[20:16]),
 		   .instruction(inst_oo_temp),
-		   .instruction_o(inst_oo),
 		   .branch_signal(branch_alu_res_oo),
-		   //output
+		   .jump_jr(jump_oo),
+		   
+		   .instruction_o(inst_oo),
 		   .out(detection_signal)
 		);
 

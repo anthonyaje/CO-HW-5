@@ -28,11 +28,14 @@ module DetectionUnit(
 		   ifid_rt,
 		   instruction,
 		   branch_signal,
+		   jump_jr,
+		   
 		   //output
 		   instruction_o,
 		   out
            );
-
+		   
+input [1:0]   jump_jr;
 input 		  mem_read;
 input         branch_signal;
 input [5-1:0] idex_rt;
@@ -51,6 +54,10 @@ always@(*)begin
 	if((mem_read) && ((idex_rt == ifid_rs) ||(idex_rt == ifid_rt)) )begin
 		out = 1;
 		instruction_o = 32'd0;
+	end
+	else if(jump_jr != 2'b00)begin
+		out =0;
+		instruction_o = 32'd0; 
 	end
 	else if(branch_signal)begin
 		out = 0;
