@@ -1,4 +1,4 @@
-{D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v} {1 {vlog -work work {D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v}
+{D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v} {1 {vlog -work work {D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Pipe_CPU_1.v}
 Model Technology ModelSim PE Student Edition vlog 10.2c Compiler 2013.07 Jul 18 2013
 -- Compiling module Pipe_CPU_1
 
@@ -109,13 +109,6 @@ Model Technology ModelSim PE Student Edition vlog 10.2c Compiler 2013.07 Jul 18 
 
 Top level modules:
 	DetectionUnit
-
-} {} {}} {D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/TestBench.v} {1 {vlog -work work {D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\TestBench.v}
-Model Technology ModelSim PE Student Edition vlog 10.2c Compiler 2013.07 Jul 18 2013
--- Compiling module TestBench
-
-Top level modules:
-	TestBench
 
 } {} {}} {D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Adder.v} {1 {vlog -work work {D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Adder.v}
 Model Technology ModelSim PE Student Edition vlog 10.2c Compiler 2013.07 Jul 18 2013

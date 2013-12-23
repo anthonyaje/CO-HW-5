@@ -27,12 +27,14 @@ module DetectionUnit(
 		   ifid_rs,
 		   ifid_rt,
 		   instruction,
+		   branch_signal,
 		   //output
 		   instruction_o,
 		   out
            );
 
 input 		  mem_read;
+input         branch_signal;
 input [5-1:0] idex_rt;
 input [5-1:0] ifid_rs;
 input [5-1:0] ifid_rt;
@@ -48,6 +50,10 @@ end
 always@(*)begin
 	if((mem_read) && ((idex_rt == ifid_rs) ||(idex_rt == ifid_rt)) )begin
 		out = 1;
+		instruction_o = 32'd0;
+	end
+	else if(branch_signal)begin
+		out = 0;
 		instruction_o = 32'd0;
 	end
 	else begin 

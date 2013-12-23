@@ -134,296 +134,296 @@ Z58 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Ass
 !s85 0
 !s101 -O0
 vDetectionUnit
-R30
-Z59 !s100 D<zEQd;]1PJ[aI1]RPh4D1
-Z60 IaWimbQMn>i@b^Qf6]Fz5E1
+Z59 IQ<k12zUE@nD>lZke5nSQC1
 R3
 R4
-Z61 w1387469566
-Z62 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v
-Z63 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v
+Z60 w1387804835
+Z61 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v
+Z62 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v
 L0 23
 R8
 r1
 31
-Z64 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v|
+Z63 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v|
 R10
-Z65 n@detection@unit
-Z66 !s108 1387609427.644000
-Z67 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v|
+Z64 n@detection@unit
+Z65 !s110 1387804890
+Z66 !s100 Cl9h?1IXjJGX;Ta>RQmH;0
+Z67 !s108 1387804890.031000
+Z68 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/DetectionUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vForwardingUnit
 R30
-Z68 !s100 1MmEN[0@jlB3?aEK]<Ul20
-Z69 IOIBRPhjo^K>XI54dJ6`XP0
+Z69 !s100 1MmEN[0@jlB3?aEK]<Ul20
+Z70 IOIBRPhjo^K>XI54dJ6`XP0
 R3
 R4
-Z70 w1387607453
-Z71 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v
-Z72 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v
+Z71 w1387607453
+Z72 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v
+Z73 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v
 L0 12
 R8
 r1
 31
-Z73 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v|
+Z74 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v|
 R10
-Z74 n@forwarding@unit
-Z75 !s108 1387609427.767000
-Z76 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v|
+Z75 n@forwarding@unit
+Z76 !s108 1387609427.767000
+Z77 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ForwardingUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vInstr_Memory
 R30
-Z77 !s100 >Z`;Q>AUogfmK<fOHedOM3
-Z78 IRFW[WXYi=l@<A80K0RBKS2
+Z78 !s100 >Z`;Q>AUogfmK<fOHedOM3
+Z79 IRFW[WXYi=l@<A80K0RBKS2
 R3
 R4
 R5
-Z79 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v
-Z80 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v
+Z80 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v
+Z81 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v
 L0 12
 R8
 r1
 31
-Z81 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v|
+Z82 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v|
 R10
-Z82 n@instr_@memory
-Z83 !s108 1387609427.865000
-Z84 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v|
+Z83 n@instr_@memory
+Z84 !s108 1387609427.865000
+Z85 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Instr_Memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX_2to1
-Z85 !s100 I@D44T^KnSJTOFmE3DckD1
-Z86 IG37flE0HUZkhlL0n7`0aA0
+Z86 !s100 I@D44T^KnSJTOFmE3DckD1
+Z87 IG37flE0HUZkhlL0n7`0aA0
 R3
 R4
 R5
-Z87 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v
-Z88 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v
+Z88 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v
+Z89 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v
 L0 12
 R8
 r1
 31
-Z89 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v|
+Z90 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v|
 R10
-Z90 n@m@u@x_2to1
-Z91 !s110 1387609428
-Z92 !s108 1387609428.005000
-Z93 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v|
+Z91 n@m@u@x_2to1
+Z92 !s110 1387609428
+Z93 !s108 1387609428.005000
+Z94 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_2to1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX_3to1
-R91
-Z94 !s100 MB_el[jTK8dI0;Ka^nR=H3
-Z95 Ih8BPFTPVD3KLN8VjC0anX3
+R92
+Z95 !s100 MB_el[jTK8dI0;Ka^nR=H3
+Z96 Ih8BPFTPVD3KLN8VjC0anX3
 R3
 R4
 R5
-Z96 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v
-Z97 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v
+Z97 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v
+Z98 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v
 L0 12
 R8
 r1
 31
-Z98 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v|
+Z99 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v|
 R10
-Z99 n@m@u@x_3to1
-Z100 !s108 1387609428.147000
-Z101 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v|
+Z100 n@m@u@x_3to1
+Z101 !s108 1387609428.147000
+Z102 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_3to1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX_4to1
-R91
-Z102 !s100 AABWR2Sid;3Z0BVjeb3I73
-Z103 ICZPV3?CSdLTRBMZSlgQEi1
+R92
+Z103 !s100 AABWR2Sid;3Z0BVjeb3I73
+Z104 ICZPV3?CSdLTRBMZSlgQEi1
 R3
 R4
 R5
-Z104 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v
-Z105 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v
+Z105 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v
+Z106 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v
 L0 12
 R8
 r1
 31
-Z106 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v|
+Z107 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v|
 R10
-Z107 n@m@u@x_4to1
-Z108 !s108 1387609428.280000
-Z109 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v|
+Z108 n@m@u@x_4to1
+Z109 !s108 1387609428.280000
+Z110 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/MUX_4to1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vPipe_CPU_1
-R91
-Z110 I666>H=MRJAgA_Vo5EXXbZ0
+Z111 IR851bz:V[_RD6?JahoBkV0
 R3
 R4
-Z111 w1387609356
-Z112 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v
-Z113 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v
+Z112 w1387808631
+Z113 8D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Pipe_CPU_1.v
+Z114 FD:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Pipe_CPU_1.v
 L0 11
 R8
 r1
 31
-Z114 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v|
+Z115 !s90 -reportprogress|300|-work|work|D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Pipe_CPU_1.v|
 R10
-Z115 n@pipe_@c@p@u_1
-Z116 !s100 [LCQ5c4Ajehb^_J6Yo;GE1
-Z117 !s108 1387609428.418000
-Z118 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_CPU_1.v|
+Z116 n@pipe_@c@p@u_1
+Z117 !s110 1387808658
+Z118 !s100 ]37SAoVJk;c>Y<[F]cA?=1
+Z119 !s108 1387808658.932000
+Z120 !s107 D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Pipe_CPU_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vPipe_Reg
-R91
-Z119 !s100 GG;SXQ:I=0FbEKgWhcf_m0
-Z120 I>]n95]o?ZC9=iM;^ME=]H2
+R92
+Z121 !s100 GG;SXQ:I=0FbEKgWhcf_m0
+Z122 I>]n95]o?ZC9=iM;^ME=]H2
 R3
 R4
-Z121 w1385267493
-Z122 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v
-Z123 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v
+Z123 w1385267493
+Z124 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v
+Z125 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v
 L0 11
 R8
 r1
 31
-Z124 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v|
+Z126 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v|
 R10
-Z125 n@pipe_@reg
-Z126 !s108 1387609428.517000
-Z127 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v|
+Z127 n@pipe_@reg
+Z128 !s108 1387609428.517000
+Z129 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Pipe_Reg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vProgramCounter
-R91
-Z128 !s100 NG4Q<NI<]dmS4jdlJ`Ld^2
-Z129 IF?CRH[XQhMe8o6K`W;7E?1
+R92
+Z130 !s100 NG4Q<NI<]dmS4jdlJ`Ld^2
+Z131 IF?CRH[XQhMe8o6K`W;7E?1
 R3
 R4
-Z130 w1387454561
-Z131 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v
-Z132 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v
+Z132 w1387454561
+Z133 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v
+Z134 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v
 L0 12
 R8
 r1
 31
-Z133 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v|
+Z135 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v|
 R10
-Z134 n@program@counter
-Z135 !s108 1387609428.872000
-Z136 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v|
+Z136 n@program@counter
+Z137 !s108 1387609428.872000
+Z138 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/ProgramCounter.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vReg_File
-Z137 !s100 A>5O6S2Czahb2WYf@:0n<1
-Z138 IHcm8igNf<7E@=c6Sg[FZU3
+Z139 !s100 A>5O6S2Czahb2WYf@:0n<1
+Z140 IHcm8igNf<7E@=c6Sg[FZU3
 R3
 R4
-Z139 w1385801612
-Z140 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v
-Z141 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v
+Z141 w1385801612
+Z142 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v
+Z143 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v
 L0 11
 R8
 r1
 31
-Z142 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v|
+Z144 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v|
 R10
-Z143 n@reg_@file
-Z144 !s110 1387609429
-Z145 !s108 1387609429.060000
-Z146 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v|
+Z145 n@reg_@file
+Z146 !s110 1387609429
+Z147 !s108 1387609429.060000
+Z148 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Reg_File.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vShift_Left_Two_28
-R144
-Z147 !s100 ;7j:9KZDCUE=RF08L57aa2
-Z148 I4A??kD?h7:bP:3gZTPa@G2
+R146
+Z149 !s100 ;7j:9KZDCUE=RF08L57aa2
+Z150 I4A??kD?h7:bP:3gZTPa@G2
 R3
 R4
-Z149 w1386141102
-Z150 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v
-Z151 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v
+Z151 w1386141102
+Z152 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v
+Z153 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v
 L0 8
 R8
 r1
 31
-Z152 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v|
+Z154 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v|
 R10
-Z153 n@shift_@left_@two_28
-Z154 !s108 1387609429.165000
-Z155 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v|
+Z155 n@shift_@left_@two_28
+Z156 !s108 1387609429.165000
+Z157 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Shift_Left_Two_28.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vShift_Left_Two_32
-R144
-Z156 !s100 GXQ5U:9RH70NMW0]g68[c2
-Z157 I2ik>C:Yd<ehf<:WWCBd`92
+R146
+Z158 !s100 GXQ5U:9RH70NMW0]g68[c2
+Z159 I2ik>C:Yd<ehf<:WWCBd`92
 R3
 R4
 R5
-Z158 8D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v
-Z159 FD:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v
+Z160 8D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v
+Z161 FD:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v
 L0 8
 R8
 r1
 31
-Z160 !s90 -reportprogress|300|-work|work|D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v|
+Z162 !s90 -reportprogress|300|-work|work|D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v|
 R10
-Z161 n@shift_@left_@two_32
-Z162 !s108 1387609429.269000
-Z163 !s107 D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v|
+Z163 n@shift_@left_@two_32
+Z164 !s108 1387609429.269000
+Z165 !s107 D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\Shift_Left_Two_32.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vSign_Extend
-R144
-Z164 !s100 `n`doIhEaETbZl3DGChh[3
-Z165 IDjSflBBBR]g@a[c19Ck3>2
+R146
+Z166 !s100 `n`doIhEaETbZl3DGChh[3
+Z167 IDjSflBBBR]g@a[c19Ck3>2
 R3
 R4
 R5
-Z166 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v
-Z167 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v
+Z168 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v
+Z169 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v
 L0 12
 R8
 r1
 31
-Z168 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v|
+Z170 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v|
 R10
-Z169 n@sign_@extend
+Z171 n@sign_@extend
+Z172 !s108 1387609429.374000
+Z173 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v|
 !i10b 1
 !s85 0
-Z170 !s108 1387609429.374000
-Z171 !s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/Sign_Extend.v|
 !s101 -O0
 vTestBench
-R144
+!s110 1387809165
 !i10b 1
-Z172 !s100 HT2I8z=7FMZB=_om^_N`:3
-Z173 I7IT5M[FzW]L1hOXe8Jz`^1
+!s100 1Qoj[=UVoVE>[8ZX3M@Qg2
+IP]hS=??J0ZQ_]44=?QBe43
 R3
 R4
-Z174 w1387602537
-Z175 8D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\TestBench.v
-Z176 FD:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\TestBench.v
+w1387809140
+Z174 8D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/TestBench.v
+Z175 FD:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/TestBench.v
 L0 14
 R8
 r1
 !s85 0
 31
-!s108 1387609429.511000
-!s107 D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\TestBench.v|
-Z177 !s90 -reportprogress|300|-work|work|D:\Anthony\My Documents\Dropbox\5th Semester\Computer Organization\Assignment\2013CO_Lab5\0016110_0016328\TestBench.v|
+!s108 1387809165.890000
+!s107 D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/TestBench.v|
+Z176 !s90 -reportprogress|300|-work|work|D:/Anthony/My Documents/Dropbox/5th Semester/Computer Organization/Assignment/2013CO_Lab5/0016110_0016328/TestBench.v|
 !s101 -O0
 R10
-Z178 n@test@bench
+Z177 n@test@bench

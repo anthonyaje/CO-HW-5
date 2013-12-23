@@ -22,7 +22,7 @@ wire [32-1:0] pc_source;
 wire [32-1:0] pc_output;
 wire [32-1:0] four = 32'd4;
 wire [32-1:0] adder1_o, adder1_oo,adder1_ooo;
-wire [32-1:0] inst_o, inst_oo;
+wire [32-1:0] inst_o, inst_oo, inst_ooo;
 wire [32-1:0] adder2_o,adder2_oo;
 wire [32-1:0] write_data;
 wire [32-1:0] RSdata_o,RSdata_oo;
@@ -39,13 +39,13 @@ wire [32-1:0] pc_mux;
 
 wire [5-1:0] rw_mux_in1, rw_mux_in2; 
 wire  [1:0] reg_des, reg_des_oo;
-wire  reg_write, reg_write_oo, reg_write_ooo;
+wire  reg_write, reg_write_oo, reg_write_ooo, reg_write_oo_f;
 wire  [4-1:0] alu_op, alu_op_oo;
 wire  [1:0] alu_src, alu_src_oo;
 wire [2-1:0]branchType, branchType_oo;
 wire [1:0]jump, jump_oo;
 wire memRead, memRead_oo, memRead_ooo;
-wire memWrite, memWrite_oo, memWrite_ooo;
+wire memWrite, memWrite_oo, memWrite_ooo, memWrite_oo_f;
 wire [1:0] memToReg, memToReg_oo, memToReg_ooo, memToReg_oooo;
 wire  branch, branch_oo, branch_ooo;
 
@@ -67,17 +67,18 @@ wire [31:0] fw_alu_in1;
 wire [31:0] fw_alu_in2;
 wire [1:0] flush_mux_ifid;
 wire [31:0] mux_inst_o;
-wire branch_alu_res;
-wire pc_mux_signal;
+wire branch_alu_res,branch_alu_res_oo;
+wire branch_flush_signal;
 wire detection_signal;
 wire [31:0] inst_oo_temp;
 
 wire [31:0] fw_mux_input;
 wire [1:0] store_mux_select;
 wire [32-1:0] store_value_mux_o;
+wire [32-1:0] mux_adder1_o;
 
-assign pc_mux_signal = branch_alu_res & branch;
-assign flush_mux_ifid = { detection_signal, pc_mux_signal };
+assign branch_flush_signal = branch_alu_res_oo & branch_ooo;
+assign flush_mux_ifid = { detection_signal, branch_flush_signal };
 assign zero_ex = {16'd0, inst_o[15:0]};
 
 MUX_3to1 #(.size(32)) Mux_PC_JUMP(
@@ -87,15 +88,11 @@ MUX_3to1 #(.size(32)) Mux_PC_JUMP(
         .select_i(jump),
         .data_o(pc_source)
        );	
-
-// IF_instruction_module if_instruction_module(
-
-		// );
 	
 MUX_2to1 #(.size(32)) Mux_PC_Source(
-        .data0_i(adder1_o),
-        .data1_i(adder2_o),	// TODO
-        .select_i(pc_mux_signal),
+        .data0_i(adder1_o),	//pc+4
+        .data1_i(adder2_oo),	//pc+4+signed-extended immediate value
+        .select_i(branch_flush_signal),
         .data_o(pc_mux)
         );	
 		
@@ -118,17 +115,23 @@ Adder Adder1(
 Instr_Memory IM(
         .pc_addr_i(pc_output),  
 	    .instr_o(inst_o)    
-	    );
+	    );		
 
 		
+MUX_3to1 #(.size(32)) Mux_adder1_o(
+        .data0_i(adder1_o),
+        .data1_i(32'd0),
+        .data2_i(adder1_oo),
+        .select_i(flush_mux_ifid),
+        .data_o(mux_adder1_o)
+        );	
 		
 Pipe_Reg #(.size(32)) IF_ID_1(       //N is the total length of input/output
 		.rst_i(rst_n),
 		.clk_i(clk_i),   
-		.data_i(adder1_o),
+		.data_i(mux_adder1_o),
 		.data_o(adder1_oo)
 		);
-		
 	
 MUX_3to1 #(.size(32)) Mux_Pipe_Reg_IFID(
         .data0_i(inst_o),
@@ -158,10 +161,7 @@ Reg_File RF(
         .RTdata_o(RTdata_o)   
         );
 		
-Shift_Left_Two_32 Shifter(
-        .data_i(SE_data),
-        .data_o(SE_data_shift)
-        ); 		
+		
 		
 DetectionUnit detectionUnit(
 		   .mem_read(memRead_oo),       
@@ -170,23 +170,18 @@ DetectionUnit detectionUnit(
 		   .ifid_rt(inst_oo_temp[20:16]),
 		   .instruction(inst_oo_temp),
 		   .instruction_o(inst_oo),
+		   .branch_signal(branch_alu_res_oo),
 		   //output
 		   .out(detection_signal)
 		);
 
 Adder Adder2(
-        .src1_i(adder1_oo),     
+        .src1_i(adder1_ooo),     
 	    .src2_i(SE_data_shift),     
 	    .sum_o(adder2_o)      
 	    );
 	
-		
-BranchAlu branchAlu(
-		.src1(RSdata_o),
-		.src2(RTdata_o),
-		.opcode(inst_oo[31:26]),
-		.result(branch_alu_res)
-		);
+
 /*
 Shift_Left_Two_28 Shifter_jump(
         .data_i(inst_oo[25:0]),
@@ -265,7 +260,27 @@ Pipe_Reg #(.size(5)) ID_EX_5(       //N is the total length of input/output
 		.data_o(rs_oo)
 		);
 		
+Pipe_Reg #(.size(32)) ID_EX_6(       //N is the total length of input/output
+		.rst_i(rst_n),
+		.clk_i(clk_i),   
+		.data_i(inst_oo),
+		.data_o(inst_ooo)
+		);
+		
 //~~~~~~~~~~~~~~~~~~ID/EX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~		
+
+BranchAlu branchAlu(
+		.src1(fw_alu_in1),
+		.src2(ALU_in2),
+		.opcode(inst_ooo[31:26]),
+		.result(branch_alu_res)
+		);
+
+Shift_Left_Two_32 Shifter(
+        .data_i(SE_data_oo),
+        .data_o(SE_data_shift)
+        ); 
+
 alu ALU(
 		.rst_n(rst_n),
         .src1(fw_alu_in1),
@@ -317,11 +332,26 @@ MUX_3to1 #(.size(5)) Mux_Write_Reg(
 		.data_o(write_reg)
 );
 
+//flush reg_write_oo
+MUX_2to1 #(.size(1)) Mux_flush_reg_write_oo(
+        .data0_i(reg_write_oo),
+        .data1_i(1'd0),
+        .select_i(branch_flush_signal),
+        .data_o(reg_write_oo_f)
+        );
+	
+//flush memWrite_oo
+MUX_2to1 #(.size(1)) Mux_flush_memWrite_oo(
+        .data0_i(memWrite_oo),
+        .data1_i(1'd0),
+        .select_i(branch_flush_signal),
+        .data_o(memWrite_oo_f)
+        );
 
 Pipe_Reg #(.size(38)) EX_MEM_1(       //N is the total length of input/output
 	.rst_i(rst_n),
 	.clk_i(clk_i),   
-	.data_i({reg_write_oo, memRead_oo, memWrite_oo, branch_oo, memToReg_oo, adder2_o}),
+	.data_i({reg_write_oo_f, memRead_oo, memWrite_oo_f, branch_oo, memToReg_oo, adder2_o}),
 	.data_o({reg_write_ooo, memRead_ooo, memWrite_ooo, branch_ooo, memToReg_ooo, adder2_oo})
 );
 	
@@ -337,6 +367,14 @@ Pipe_Reg #(.size(37)) EX_MEM_3(       //N is the total length of input/output
 	.clk_i(clk_i),   
 	.data_i({store_value_mux_o,write_reg}),
 	.data_o({RTdata_ooo,write_reg_oo})
+	);
+
+//for branch condition	
+Pipe_Reg #(.size(1)) EX_MEM_4(       //N is the total length of input/output
+	.rst_i(rst_n),
+	.clk_i(clk_i),   
+	.data_i(branch_alu_res),
+	.data_o(branch_alu_res_oo)
 	);
 
 ForwardingUnit fdunit (
@@ -361,6 +399,9 @@ MUX_3to1 #(.size(32)) Mux_Store_Reg(
 		.select_i(store_mux_select),
 		.data_o(store_value_mux_o)
 );
+
+
+
 /********************************************EX/MEM**********************************************************/
 MUX_2to1 #(.size(32)) Mux_memory_select(
 		.data0_i(ALU_res_oo),
